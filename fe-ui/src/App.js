@@ -4,8 +4,9 @@ import TodoList from "./components/TodoList";
 import 'daisyui/dist/full.css';
 import './style/homePage.css';
 import Home from './components/Home';
+import Contact from './components/Contact';
 import About from './components/About';
-import { BrowserRouter, NavLink, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { BrowserRouter, NavLink, Routes, Route, Navigate, Link, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -25,18 +26,28 @@ function App() {
           <div className="links">
             <a href="#"><Link to="/">TRANG CHỦ</Link></a>
             <a href="#"><Link to="/about">GIỚI THIỆU</Link></a>
-            <a href="#">TIN TỨC</a>
             <a href="#"><Link to="/contact">LIÊN HỆ</Link></a>
           </div>
           <div className="login">
             <button className="btn" onClick={() => document.getElementById('my_modal_1').showModal()}>ĐĂNG KÝ</button>
             <dialog id="my_modal_1" className="modal">
               <div className="modal-box">
-                <h3 className="font-bold text-lg-center">Register Form</h3>
-                <p className="py-4">Press ESC key or click the button below to close</p>
+                <h3 className="font-bold flex text-lg text-center">Register Form</h3>
+                <div className="modal-content">
+                  <form method="dialog" className="space-y-4">
+                    <div className="form-control">
+                      <label htmlFor="email" className="label">Email</label>
+                      <input type="email" id="email" className="input input-bordered" placeholder="Enter your email" />
+                    </div>
+                    <div className="form-control">
+                      <label htmlFor="password" className="label">Password</label>
+                      <input type="password" id="password" className="input input-bordered" placeholder="Enter your password" />
+                    </div>
+                  </form>
+                </div>
                 <div className="modal-action">
                   <form method="dialog">
-                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn">Register</button>
                     <button className="btn">Close</button>
                   </form>
                 </div>
@@ -45,11 +56,22 @@ function App() {
             <button className="btn" onClick={() => document.getElementById('my_modal_2').showModal()}>ĐĂNG NHẬP</button>
             <dialog id="my_modal_2" className="modal">
               <div className="modal-box">
-                <h3 className="font-bold text-lg-center">Login Form</h3>
-                <p className="py-4">Press ESC key or click the button below to close</p>
+                <h3 className="font-bold flex text-lg text-center">Login Form</h3>
+                <div className="modal-content">
+                  <form method="dialog" className="space-y-4">
+                    <div className="form-control">
+                      <label htmlFor="email" className="label">Email</label>
+                      <input type="email" id="email" className="input input-bordered" placeholder="Enter your email" />
+                    </div>
+                    <div className="form-control">
+                      <label htmlFor="password" className="label">Password</label>
+                      <input type="password" id="password" className="input input-bordered" placeholder="Enter your password" />
+                    </div>
+                  </form>
+                </div>
                 <div className="modal-action">
                   <form method="dialog">
-                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn">Login</button>
                     <button className="btn">Close</button>
                   </form>
                 </div>
@@ -71,7 +93,7 @@ function App() {
               <span>Mua ngay</span>
             </a>
           </div>
-          <img src="/assets/header.png" />
+          <img src="./assets/header.png" />
         </header>
         <h2 className="separator">Thanh toán NFT của bạn</h2>
         <div className="sell-nft">
@@ -113,7 +135,7 @@ function App() {
           </div>
           <div className="nft-list">
             <div className="item">
-              <img src="assets/item-1.png" />
+              <img src="./assets/item-1.png" />
               <div className="info">
                 <div>
                   <h5>Crypto</h5>
@@ -130,7 +152,7 @@ function App() {
               </div>
             </div>
             <div className="item">
-              <img src="assets/item-2.png" />
+              <img src="./assets/item-2.png" />
               <div className="info">
                 <div>
                   <h5>Abs-Art</h5>
@@ -147,7 +169,7 @@ function App() {
               </div>
             </div>
             <div className="item">
-              <img src="assets/item-3.png" />
+              <img src="./assets/item-3.png" />
               <div className="info">
                 <div>
                   <h5>TestArt</h5>
@@ -188,7 +210,7 @@ function App() {
         <h2 className="separator">Top Giao dịch</h2>
         <div className="sellers">
           <div className="item">
-            <img src="assets/profile-1.png" />
+            <img src="./assets/profile-1.png" />
             <div className="info">
               <h4>An An</h4>
               <p>15.2K</p>
