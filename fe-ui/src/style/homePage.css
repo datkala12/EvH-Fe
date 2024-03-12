@@ -34,7 +34,7 @@ nav a.logo {
     font-weight: 600;
 }
 
-nav .links a:not(:last-child) {
+nav .links a{
     margin-right: 20px;
     font-weight: 600;
 }
@@ -49,7 +49,6 @@ nav .login button {
 
 nav .login button.signup {
     background-color: #000;
-    color: #fff;
     border-radius: 4px;
     margin-right: 14px;
 }
@@ -110,7 +109,7 @@ h2.separator {
     margin-top: 40px;
 }
 
-.sell-nft {
+.Card {
     padding: 0 80px;
     margin: 50px 0 80px;
     display: flex;
@@ -118,8 +117,8 @@ h2.separator {
     gap: 30px;
 }
 
-.sell-nft .item,
-.nft-shop .nft-list .item {
+.Card .item,
+.Acc .nft-list .item {
     padding: 20px;
     background: #fff;
     border-radius: 18px;
@@ -127,42 +126,42 @@ h2.separator {
     transition: all 0.3s ease;
 }
 
-.sell-nft .item:hover,
-.nft-shop .nft-list .item:hover,
+.Card .item:hover,
+.Acc .nft-list .item:hover,
 .sellers .item:hover {
     box-shadow: none;
 }
 
-.sell-nft .item .header {
+.Card .item .header {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.sell-nft .item .header i {
+.Card .item .header i {
     font-size: 40px;
 }
 
-.sell-nft .item .header h5 {
+.Card .item .header h5 {
     font-size: 17px;
 }
 
-.sell-nft .item p {
+.Card .item p {
     margin-top: 10px;
     padding: 0 4px;
 }
 
-.nft-shop {
+.Acc {
     padding: 0 80px;
     margin-top: 30px;
 }
 
-.nft-shop .category {
+.Acc .category {
     display: flex;
     gap: 14px;
 }
 
-.nft-shop .category a {
+.Acc .category a {
     background-color: #dfdcdc;
     padding: 8px 14px;
     font-size: 15px;
@@ -170,25 +169,25 @@ h2.separator {
     transition: all 0.3s ease;
 }
 
-.nft-shop .category a:hover {
+.Acc .category a:hover {
     color: #fff;
     background-color: #0f2182;
 }
 
-.nft-shop .nft-list {
+.Acc .nft-list {
     padding: 40px 0;
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-.nft-shop .nft-list .item img {
+.Acc .nft-list .item img {
     width: 280px;
     height: 280px;
     border-radius: 18px;
 }
 
-.nft-shop .nft-list .item .info {
+.Acc .nft-list .item .info {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -196,55 +195,55 @@ h2.separator {
     border-bottom: 1px solid #edecec;
 }
 
-.nft-shop .nft-list .item .info h5 {
+.Acc .nft-list .item .info h5 {
     font-size: 18px;
 }
 
-.nft-shop .nft-list .item .info .btc {
+.Acc .nft-list .item .info .btc {
     margin-top: 10px;
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.nft-shop .nft-list .item .btc i {
+.Acc .nft-list .item .btc i {
     font-size: 22px;
     color: #304ffe;
 }
 
-.nft-shop .nft-list .item .btc p {
+.Acc .nft-list .item .btc p {
     font-size: 12px;
     color: #304ffe;
 }
 
-.nft-shop .nft-list .item .info>p {
+.Acc .nft-list .item .info>p {
     font-size: 12px;
     color: #989898;
 }
 
-.nft-shop .nft-list .item .bid {
+.Acc .nft-list .item .bid {
     padding: 14px 0 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nft-shop .nft-list .item .bid p,
-.nft-shop .nft-list .item .bid a {
+.Acc .nft-list .item .bid p,
+.Acc .nft-list .item .bid a {
     background-color: #edecec;
     padding: 6px 10px;
     font-size: 13px;
     border-radius: 10px;
 }
 
-.nft-shop .nft-list .item .bid a {
+.Acc .nft-list .item .bid a {
     color: #304ffe;
     background: transparent;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
-.nft-shop .nft-list .item .bid a:hover {
+.Acc .nft-list .item .bid a:hover {
     color: #fff;
     background-color: #000;
 }
@@ -360,8 +359,8 @@ footer .right p {
     nav,
     header,
     h2.separator,
-    .sell-nft,
-    .nft-shop,
+    .Card,
+    .Acc,
     .sellers {
         padding: 0 40px;
     }
@@ -374,7 +373,7 @@ footer .right p {
         width: 540px;
     }
 
-    .nft-shop .nft-list .item img {
+    .Acc .nft-list .item img {
         width: 220px;
         height: 220px;
     }
@@ -403,28 +402,28 @@ footer .right p {
         font-size: 34px;
     }
 
-    .sell-nft .item .header i {
+    .Card .item .header i {
         font-size: 36px;
     }
 
-    .sell-nft .item .header h5 {
+    .Card .item .header h5 {
         font-size: 15px;
     }
 
-    .sell-nft .item p {
+    .Card .item p {
         font-size: 13px;
     }
 
-    .nft-shop .nft-list {
+    .Acc .nft-list {
         flex-wrap: wrap;
         row-gap: 30px;
     }
 
-    .nft-shop .nft-list .item {
+    .Acc .nft-list .item {
         width: 48%;
     }
 
-    .nft-shop .nft-list .item img {
+    .Acc .nft-list .item img {
         width: 100%;
         height: auto;
     }
@@ -467,12 +466,12 @@ footer .right p {
         width: 100%;
     }
 
-    .sell-nft {
+    .Card {
         flex-wrap: wrap;
         gap: 20px;
     }
 
-    .sell-nft .item {
+    .Card .item {
         width: 48%;
     }
 
@@ -502,8 +501,8 @@ footer .right p {
     nav,
     header,
     h2.separator,
-    .sell-nft,
-    .nft-shop,
+    .Card,
+    .Acc,
     .sellers {
         padding: 0 20px;
     }
@@ -555,16 +554,16 @@ footer .right p {
         font-size: 30px;
     }
 
-    .sell-nft .item {
+    .Card .item {
         width: 100%;
     }
 
-    .nft-shop .nft-list .item,
+    .Acc .nft-list .item,
     .sellers .item {
         width: 47%;
     }
 
-    .nft-shop .category a {
+    .Acc .category a {
         font-size: 13px;
     }
 
