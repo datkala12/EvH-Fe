@@ -12,6 +12,7 @@ import '../src/style/detail.css';
 import { BrowserRouter, NavLink, Routes, Route, Navigate, Link, Switch, Outlet, Router } from 'react-router-dom';
 
 
+
 function App() {
   return (
     <BrowserRouter basename="/">
@@ -20,7 +21,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
           <Route path="Contact" element={<Contact />} />
-          <Route path="a" element={<Detail/>}/>
+          <Route path="Detail" element={<Detail/>}/>
         </Route>
       </Routes> 
     </BrowserRouter>

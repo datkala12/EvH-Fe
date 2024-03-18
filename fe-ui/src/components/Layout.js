@@ -6,7 +6,7 @@ const Layout = () => {
     <>
       <nav>
         <a href="#" className="logo">
-          AccHub NFT
+          AccHub
         </a>
         {/* thanh công cụ*/}
         <div className="links">
