@@ -8,6 +8,7 @@ import About from './components/About';
 import Layout from "./components/Layout";
 import Detail from "./components/Detail";
 import '../src/style/detail.css';
+import Gdetail from "./components/Gdetail";
 
 import { BrowserRouter, NavLink, Routes, Route, Navigate, Link, Switch, Outlet, Router } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="About" element={<About />} />
           <Route path="Contact" element={<Contact />} />
           <Route path="Detail" element={<Detail/>}/>
+          <Route path="Gdetail" element={<Gdetail/>} />
         </Route>
       </Routes> 
     </BrowserRouter>

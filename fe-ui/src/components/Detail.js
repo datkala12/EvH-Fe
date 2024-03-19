@@ -37,7 +37,7 @@ function Detail() {
           </div>
         </div>
       </div>
-      <div className="menu grid grid-cols-2 gap-4 place-content-between h-48">
+      <div className="flex place-content-between px-10">
         <div className="dropdown dropdown-hover">
           <div tabIndex={0} role="button" className="btn m-1">
             Danh Mục
