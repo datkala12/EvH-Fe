@@ -30,7 +30,7 @@ function Menu(){
           <div className="card-body">
             <h2 className="card-title text-body-dark">Liên Minh Mobile</h2>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Xem Thêm</button>
+              <Link to="/Detail" className="btn btn-primary">Xem Thêm</Link>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ function Menu(){
           <div className="card-body">
             <h2 className="card-title text-body-dark">Valorant</h2>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Xem Thêm</button>
+              <Link to="/Detail" className="btn btn-primary">Xem Thêm</Link>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ function Menu(){
           <div className="card-body">
             <h2 className="card-title text-body-dark">Đấu Trường Chân Lý</h2>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Xem Thêm</button>
+              <Link to="/Detail" className="btn btn-primary">Xem Thêm</Link>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ const Layout = () => {
     <>
       <nav>
         <a href="#" className="logo">
-          AccHub
+          <Link to="/"> AccHub</Link>
         </a>
         {/* thanh công cụ*/}
         <div className="links">
@@ -21,14 +21,14 @@ const Layout = () => {
           </a>
         </div>
 
-        <div className="login">
+        <div className="login ">
           <button
             className="btn btn-outline btn-info"
             onClick={() => document.getElementById("my_modal_1").showModal()}
           >
             Đăng Ký
           </button>
-          <dialog id="my_modal_1" className="modal">
+          <dialog id="my_modal_1" className="modal bg-slate-100">
             <div className="modal-box">
               <form method="dialog">
                 <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">

@@ -1,11 +1,11 @@
-import Game from "./Game";
-import "../style/gdetail.css";
+
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 function Gdetail() {
   return (
     <div className="Repon">
-      <div className="name text-black px-[5rem] mb-5">
+      <div className="name text-black px-[5rem] mb-5 text-2xl font-semibold">
         <h1>Tài Khoản #001/Liên Minh Huyền Thoại</h1>
       </div>
       <div className="grid grid-cols-12 px-[5rem] gap-5">
@@ -26,7 +26,10 @@ function Gdetail() {
           </div>
           <div className="title">
             <h2 className="text-black text-xl p-5">Chưa Rank Mùa Nào Lv30</h2>
-            <img className="p-5" src="https://res.cloudinary.com/deupkdvle/image/upload/v1700906537/hue_qm6jwk.webp" />
+            <img
+              className="p-5"
+              src="https://res.cloudinary.com/deupkdvle/image/upload/v1700906537/hue_qm6jwk.webp"
+            />
           </div>
         </div>
         <div className="col-span-3 ">
@@ -82,10 +85,7 @@ function Gdetail() {
             <div className="flex">
               <span className="font-thin">Giá: </span>
               <div className="flex">
-                <span className="text-yellow-400 font-bold">
-                  250
-                  
-                </span>
+                <span className="text-yellow-400 font-bold">250</span>
               </div>
               <div className="ms-auto">
                 <span className="font-thin">
@@ -96,7 +96,9 @@ function Gdetail() {
             </div>
             <div className="divider "></div>
             <div className="sell grid">
-              <button className="btn btn-outline btn-error">Mua Ngay</button>
+              <Link to="/Pay" className="btn btn-outline btn-error">
+                Mua Ngay
+              </Link>
             </div>
           </div>
         </div>

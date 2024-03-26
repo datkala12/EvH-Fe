@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../style/homePage.css";
 import Footer from "./Footer";
 import Menu from "./Menu";
+import headerimg from "../assets/header.png";
 function Home() {
   return (
     <div className="repon">
@@ -16,7 +17,7 @@ function Home() {
           </p>
         </div>
         <img
-          src="https://res.cloudinary.com/deupkdvle/image/upload/v1710071225/5468a33bc43e258995f15ad01e5ad7cc-removebg-preview_dnldln.png"
+          src={headerimg}
           alt="hình ảnh"
         />
       </header>

@@ -60,7 +60,7 @@ function Game() {
                   <img src="https://res.cloudinary.com/deupkdvle/image/upload/v1710731589/dollar_rwszjr.png" />
                 </p>
 
-                <button className="btn btn-outline btn-error">Mua Ngay</button>
+                <Link to="/Gdetail" className="btn btn-outline btn-error">Mua Ngay</Link>
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@ function Game() {
                   <img src="https://res.cloudinary.com/deupkdvle/image/upload/v1710731589/dollar_rwszjr.png" />
                 </p>
 
-                <button className="btn btn-outline btn-error">Mua Ngay</button>
+                <Link to="/Gdetail" className="btn btn-outline btn-error">Mua Ngay</Link>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@ function Game() {
                   <img src="https://res.cloudinary.com/deupkdvle/image/upload/v1710731589/dollar_rwszjr.png" />
                 </p>
 
-                <button className="btn btn-outline btn-error">Mua Ngay</button>
+                <Link to="/Gdetail" className="btn btn-outline btn-error">Mua Ngay</Link>
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@ function Game() {
                   <img src="https://res.cloudinary.com/deupkdvle/image/upload/v1710731589/dollar_rwszjr.png" />
                 </p>
 
-              <button className="btn btn-outline btn-error">Mua Ngay</button>
+              <Link to="/Gdetail" className="btn btn-outline btn-error">Mua Ngay</Link>
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@ function Game() {
                   <img src="https://res.cloudinary.com/deupkdvle/image/upload/v1710731589/dollar_rwszjr.png" />
                 </p>
 
-                <button className="btn btn-outline btn-error">Mua Ngay</button>
+                <Link to="/Gdetail" className="btn btn-outline btn-error">Mua Ngay</Link>
               </div>
             </div>
           </div>
@@ -214,7 +214,7 @@ function Game() {
                   <img src="https://res.cloudinary.com/deupkdvle/image/upload/v1710731589/dollar_rwszjr.png" />
                 </p>
 
-                <button className="btn btn-outline btn-error">Mua Ngay</button>
+                <Link to="/Gdetail" className="btn btn-outline btn-error">Mua Ngay</Link>
               </div>
             </div>
           </div>
@@ -244,7 +244,7 @@ function Game() {
                   <img src="https://res.cloudinary.com/deupkdvle/image/upload/v1710731589/dollar_rwszjr.png" />
                 </p>
 
-                <button className="btn btn-outline btn-error">Mua Ngay</button>
+                <Link to="/Gdetail" className="btn btn-outline btn-error">Mua Ngay</Link>
               </div>
             </div>
           </div>
