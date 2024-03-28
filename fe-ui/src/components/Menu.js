@@ -60,7 +60,7 @@ function Menu(){
           <div className="card-body">
             <h2 className="card-title text-body-dark">Đấu Trường Chân Lý</h2>
             <div className="card-actions justify-end">
-              <Link to="/Detail" className="btn btn-primary">Xem Thêm</Link>
+              <Link to="/Post" className="btn btn-primary">Xem Thêm</Link>
             </div>
           </div>
         </div>

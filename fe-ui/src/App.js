@@ -12,6 +12,7 @@ import Gdetail from "./components/Gdetail";
 
 import { BrowserRouter, NavLink, Routes, Route, Navigate, Link, Switch, Outlet, Router } from 'react-router-dom';
 import Pay from "./components/Pay";
+import Post from "./components/Post";
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="Detail" element={<Detail/>}/>
           <Route path="Gdetail" element={<Gdetail/>} />
           <Route path="Pay" element={<Pay/>} />
+          <Route path="Post" element={<Post/>}/>
         </Route>
       </Routes> 
     </BrowserRouter>

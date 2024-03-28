@@ -1,4 +1,3 @@
-import "../style/pay.css";
 import Footer from "./Footer.js";
 function Pay() {
   return (
@@ -6,16 +5,11 @@ function Pay() {
       <div className="name text-black font-bold text-2xl px-[5rem] mb-5">
         <h2>Giỏ Hàng</h2>
       </div>
-      <div className="overflow-x-auto  px-[5rem] mb-5">
+      <div className="overflow-x-auto h-[23rem]  px-[5rem] mb-5">
         <table className="table">
           {/* head */}
           <thead>
             <tr>
-              <th>
-                <label onClick={onClick}>
-                  <input type="checkbox" className="checkbox" id="tong" />
-                </label>
-              </th>
               <th>Tên Acc</th>
               <th>Thời Gian</th>
               <th>Loại</th>
@@ -25,11 +19,6 @@ function Pay() {
           <tbody id="price">
             {/* row 1 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox ds" />
-                </label>
-              </th>
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
@@ -62,11 +51,6 @@ function Pay() {
             </tr>
             {/* row 2 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox ds" />
-                </label>
-              </th>
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
@@ -99,11 +83,6 @@ function Pay() {
             </tr>
             {/* row 3 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox ds" />
-                </label>
-              </th>
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
@@ -134,11 +113,6 @@ function Pay() {
             </tr>
             {/* row 4 */}
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox ds" />
-                </label>
-              </th>
               <td>
                 <div className="flex items-center gap-3">
                   <div className="avatar">
@@ -201,13 +175,6 @@ const handleClick = (e) => {
   e.target.parentElement.parentElement.remove();
 };
 
-const onClick = (e) => {
-  const clickTong = document.getElementById("tong");
-  const listCheck = document.getElementsByClassName("ds");
-  console.log(clickTong);
-  for (const element of listCheck) {
-    element.checked = clickTong.checked;
-  }
-};
+
 
 export default Pay;
