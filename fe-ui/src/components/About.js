@@ -4,36 +4,29 @@ function About() {
   return (
     <div className="repon">
       <div className="title text-black text-3xl font-bold text-center">
-        <h1>Giới Thiệu</h1>
+        <h1>About Us</h1>
       </div>
       <div className="container px-[5rem] mb-5 p-5 mt-8 text-black">
         <p className="text-lg mb-4">
-          Trang web của chúng tôi được tạo ra với mục đích cung cấp một nền tảng
-          toàn diện cho cộng đồng game thủ, nơi mà họ có thể dễ dàng tìm kiếm,
-          mua bán và cho thuê các tài khoản game theo nhu cầu của mình. Dù bạn
-          là một người chơi giải trí thích khám phá các thế giới mới hay một
-          game thủ chuyên nghiệp đang tìm kiếm tài khoản cấp độ cao để tham gia
-          vào các cuộc chiến đỉnh cao, chúng tôi cam kết mang lại cho bạn trải
-          nghiệm tốt nhất.
+          Our website is created with the purpose of providing a comprehensive platform for the gaming community,
+          where they can easily search, buy, and rent game accounts according to their needs. Whether you are a
+          casual gamer who enjoys exploring new worlds or a professional gamer seeking high-level accounts to
+          participate in top-level battles, we are committed to providing you with the best experience.
         </p>
         <p className="text-lg mb-4">
-          Với một cộng đồng đa dạng và phong phú, chúng tôi tự hào là một điểm
-          đến đáng tin cậy và an toàn cho mọi game thủ. Bằng cách cung cấp một
-          giao diện trực tuyến thuận tiện và tiện ích, chúng tôi đảm bảo rằng
-          quá trình mua bán và cho thuê tài khoản của bạn sẽ diễn ra một cách
-          mượt mà và an toàn nhất có thể.
+          With a diverse and rich community, we pride ourselves on being a reliable and safe destination for all
+          gamers. By providing a convenient and user-friendly online interface, we ensure that the process of
+          buying and renting accounts will be as smooth and safe as possible.
         </p>
         <p className="text-lg mb-4">
-          Sự đảm bảo về tính bảo mật và đáng tin cậy là ưu tiên hàng đầu của
-          chúng tôi. Tất cả các giao dịch được thực hiện thông qua trang web của
-          chúng tôi đều được mã hóa và bảo vệ bởi các biện pháp an ninh nghiêm
-          ngặt, đảm bảo rằng thông tin cá nhân của bạn luôn được bảo vệ.
+          Ensuring security and reliability is our top priority. All transactions made through our website are
+          encrypted and protected by strict security measures, ensuring that your personal information is always
+          protected.
         </p>
         <p className="text-lg">
-          Hãy khám phá trang web của chúng tôi ngay hôm nay và trải nghiệm sự
-          thuận tiện, an toàn và đáng tin cậy khi tìm kiếm và giao dịch các tài
-          khoản game. Chúng tôi cam kết mang lại cho bạn trải nghiệm tốt nhất,
-          giúp bạn tìm thấy tài khoản game hoàn hảo cho cuộc phiêu lưu của mình!
+          Explore our website today and experience the convenience, safety, and reliability when searching for
+          and trading game accounts. We are committed to providing you with the best experience, helping you find
+          the perfect game account for your adventure!
         </p>
       </div>
       <div className="divider"></div>
@@ -82,7 +75,7 @@ function About() {
             <br />
             <p className="text-black text-center">Phan Minh Huy</p>
           </div>
-          
+
         </div>
       </div>
       <Footer />

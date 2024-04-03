@@ -9,11 +9,11 @@ function Home() {
       <header>
         <div className="left">
           <h1>
-            Dùng thử ngay <span>AccHub</span>
+            Try now <span>AccHub</span>
           </h1>
           <p>
-            Một sản phẩm, dự án do nhóm thực tập sinh phát triển nhằm cung cấp
-            phương thức thanh toán mới thuận tiện hơn cho mọi người
+            A product or project developed by an intern team aims to provide a new,
+            more convenient payment method for everyone.
           </p>
         </div>
         <img
@@ -23,14 +23,14 @@ function Home() {
       </header>
 
       {/* Games */}
-      <Menu/>
+      <Menu />
 
       {/* Accgame */}
-      <div className="Acc">
+      {/* <div className="Acc">
         <h2 className="separator">Các NFT nổi bật</h2>
 
         <div className="carousel w-full grid grid-cols-4 gap-5">
-        <div className="nft-list">
+          <div className="nft-list">
             <div className="item">
               <img src="./assets/item-1.png" />
               <div className="info">
@@ -109,7 +109,7 @@ function Home() {
             2
           </a>
         </div>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

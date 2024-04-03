@@ -3,9 +3,9 @@ import Footer from "./Footer";
 function Contact() {
   return (
     <div className="repon">
-      <div className="container text-black px-[30rem] mb-5 ">
-        <h1 className="text-2xl font-bold text-center">Liên hệ</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="container text-black px-[30rem] mb-5 p-5">
+        <h1 className="text-2xl font-bold text-center pb-10">Contact</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5">
           <div>
             <label
               className="block text-gray-700 font-bold mb-2"
@@ -24,7 +24,7 @@ function Contact() {
               className="block text-gray-700 font-bold mb-2"
               htmlFor="fullname"
             >
-              Họ và tên:
+              Fullname:
             </label>
             <input
               type="text"
@@ -38,13 +38,13 @@ function Contact() {
             className="block text-gray-700 font-bold mb-2"
             htmlFor="message"
           >
-            Nội dung:
+            Message:
           </label>
           <textarea
             className="textarea textarea-bordered rounded-lg w-full h-32 resize-none"
             id="message"
             name="message"
-            placeholder="Nhập nội dung tin nhắn"
+            placeholder="Message contents..."
           ></textarea>
         </div>
         <div className="mt-4">
@@ -52,7 +52,7 @@ function Contact() {
             className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-all duration-200 float-right"
             onClick={() => document.getElementById("my_modal_3").showModal()}
           >
-            Gửi
+            Send
           </button>
           <dialog id="my_modal_3" className="modal bg-slate-100">
             <div className="modal-box bg-slate-100">
@@ -60,7 +60,7 @@ function Contact() {
                 <button className="btn btn-sm absolute right-2 top-2">✕</button>
               </form>
               <div className="flex place-content-center ">
-                <h3 className="font-bold text-lg text-white ">Gửi Thành Công</h3>
+                <h3 className="font-bold text-lg text-white ">Send successful</h3>
               </div>
             </div>
           </dialog>

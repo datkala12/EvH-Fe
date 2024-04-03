@@ -1,148 +1,96 @@
 import Footer from "./Footer.js";
+import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import { useParams, useSearchParams } from "react-router-dom";
+import { useWallet } from '@solana/wallet-adapter-react'
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
+
 function Pay() {
+  const [cart, setCart] = useState([]);
+  const [data, setData] = useState([])
+  const { publicKey } = useWallet()
+  let { id } = useParams();
+  console.log("id", id)
+
+  useEffect(() => {
+    fetchCartItems();
+  }, []);
+
+  const fetchCartItems = async () => {
+    try {
+      const response = await axios.get('http://localhost:8080/api/cart/items');
+      setCart(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error fetching cart items:', error);
+    }
+  };
+
+  const removeFromCart = async (productId) => {
+    try {
+      await axios.delete(`http://localhost:8080/api/cart/remove/${productId}`);
+      fetchCartItems();
+    } catch (error) {
+      console.error('Error removing from cart:', error);
+    }
+  };
+
+
   return (
     <div className="Repon">
       <div className="name text-black font-bold text-2xl px-[5rem] mb-5">
-        <h2>Giỏ Hàng</h2>
+        <h2>Cart</h2>
       </div>
       <div className="overflow-x-auto h-[23rem]  px-[5rem] mb-5">
         <table className="table">
           {/* head */}
           <thead>
             <tr>
-              <th>Tên Acc</th>
-              <th>Thời Gian</th>
-              <th>Loại</th>
+              <th>Account</th>
+              <th>Time</th>
+              <th>Type</th>
               <th></th>
             </tr>
           </thead>
+          {/* Set data */}
           <tbody id="price">
-            {/* row 1 */}
-            <tr>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="https://i.pinimg.com/564x/f8/41/ed/f841ed83f6899b264aef4dd651d5ec1a.jpg"
-                        alt="Avatar Tailwind CSS Component"
-                      />
+
+
+            {/* {Object.values(cart).map(product => ( */}
+            {cart.map((product) => (
+              <tr key={product.id}>
+                <td>
+                  <div className="flex items-center gap-3">
+                    <div className="avatar">
+                      <div className="mask mask-squircle w-12 h-12">
+                        <img
+                          src={product.image_detail}
+                          alt={product.name}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="font-bold text-amber-500">
+                        {product.name}
+                      </div>
+                      <div className="text-sm text-green-500">{product.price}</div>
                     </div>
                   </div>
-                  <div>
-                    <div className="font-bold text-amber-500">
-                      Liên Minh Huyền Thoại
-                    </div>
-                    <div className="text-sm text-green-500">250.000VNĐ</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Thời Gian:
-                <br />
-                <span className="badge badge-ghost badge-sm">Vĩnh Viễn</span>
-              </td>
-              <td>Mua</td>
-              <th>
-                <button className="btn btn-ghost" onClick={handleClick}>
-                  Xóa
-                </button>
-              </th>
-            </tr>
-            {/* row 2 */}
-            <tr>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="https://i.pinimg.com/564x/f8/41/ed/f841ed83f6899b264aef4dd651d5ec1a.jpg"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold text-amber-500">
-                      Liên Minh Mobile
-                    </div>
-                    <div className="text-sm  text-green-500">210.000VNĐ</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Thời Gian:
-                <br />
-                <span className="badge badge-ghost badge-sm">1 Tháng</span>
-              </td>
-              <td>Thuê</td>
-              <th>
-                <button className="btn btn-ghost" onClick={handleClick}>
-                  Xóa
-                </button>
-              </th>
-            </tr>
-            {/* row 3 */}
-            <tr>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="https://i.pinimg.com/564x/f8/41/ed/f841ed83f6899b264aef4dd651d5ec1a.jpg"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold text-orange-500">Valorant</div>
-                    <div className="text-sm text-green-500">300.000VNĐ</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Thời Gian:
-                <br />
-                <span className="badge badge-ghost badge-sm">Vĩnh Viễn</span>
-              </td>
-              <td>Mua</td>
-              <th>
-                <button onClick={handleClick} className="btn btn-ghost">
-                  Xóa
-                </button>
-              </th>
-            </tr>
-            {/* row 4 */}
-            <tr>
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="https://i.pinimg.com/564x/f8/41/ed/f841ed83f6899b264aef4dd651d5ec1a.jpg"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold text-orange-500">
-                      Đấu Trường Chân Lý
-                    </div>
-                    <div className="text-sm text-green-500">280.000</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Thời Gian:
-                <br />
-                <span className="badge badge-ghost badge-sm">3 Tháng</span>
-              </td>
-              <td>Thuê</td>
-              <th>
-                <button onClick={handleClick} className="btn btn-ghost">
-                  Xóa
-                </button>
-              </th>
-            </tr>
+                </td>
+                <td>
+                  Time:
+                  <br />
+                  <span className="badge badge-ghost badge-sm">{product.rentalDuration}</span>
+                </td>
+                <td>{product.type}</td>
+                <th>
+                  <button className="btn btn-ghost" onClick={() => removeFromCart(product.id)}>
+                    Delete
+                  </button>
+                </th>
+              </tr>
+            ))}
+
           </tbody>
         </table>
       </div>
@@ -150,8 +98,9 @@ function Pay() {
         <button
           className="btn btn-outline btn-success mb-5 mr-20 "
           onClick={() => document.getElementById("my_modal_3").showModal()}
+          submitTarget='/checkout' enabled={publicKey !== null}
         >
-          Thanh Toán
+          Checkout
         </button>
         <dialog id="my_modal_3" className="modal bg-slate-100">
           <div className="modal-box bg-slate-100">
@@ -160,7 +109,7 @@ function Pay() {
             </form>
             <div className="flex place-content-center ">
               <h3 className="font-bold text-lg ">
-                Thanh Toán Thành Công
+                Payment success
               </h3>
             </div>
           </div>
@@ -170,11 +119,5 @@ function Pay() {
     </div>
   );
 }
-const handleClick = (e) => {
-  const parent = document.getElementById("price");
-  e.target.parentElement.parentElement.remove();
-};
-
-
 
 export default Pay;

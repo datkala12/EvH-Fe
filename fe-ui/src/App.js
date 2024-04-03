@@ -20,18 +20,18 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <Routes>
-        <Route path="/" element={<Layout/>}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
           <Route path="Contact" element={<Contact />} />
-          <Route path="Detail" element={<Detail/>}/>
-          <Route path="Gdetail" element={<Gdetail/>} />
-          <Route path="Pay" element={<Pay/>} />
-          <Route path="Post" element={<Post/>}/>
+          <Route path="Detail/:id" element={<Detail />} />
+          <Route path="Gdetail/:id" element={<Gdetail />} />
+          <Route path="Pay" element={<Pay />} />
+          <Route path="Post" element={<Post />} />
         </Route>
-      </Routes> 
+      </Routes>
     </BrowserRouter>
-  
+
   )
 }
 
