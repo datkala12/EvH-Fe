@@ -62,21 +62,43 @@ function Detail() {
         </div>
       </div>
       <div className="flex place-content-between px-10">
-        <div className="dropdown dropdown-hover">
-          <div tabIndex={0} role="button" className="btn m-1">
-            Price sort
+        <div>
+
+          <div className="dropdown dropdown-hover">
+            <div tabIndex={0} role="button" className="btn m-1">
+              Price sort
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-slate-100 rounded-box w-52"
+            >
+              <li>
+                <a href={location.pathname + "?price=1"}>All</a>
+              </li>
+              <li>
+                <a href={location.pathname + "?price=2"}>Over 20$</a>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex={0}
-            className="dropdown-content z-[1] menu p-2 shadow bg-slate-100 rounded-box w-52"
-          >
-            <li>
-              <a href={location.pathname + "?price=1"}>All</a>
-            </li>
-            <li>
-              <a href={location.pathname + "?price=2"}>Under 49$</a>
-            </li>
-          </ul>
+          <div className="dropdown dropdown-hover">
+            <div tabIndex={0} role="button" className="btn m-1">
+              Type sort
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-slate-100 rounded-box w-52"
+            >
+              <li>
+                <a href={location.pathname + "?type='All'"}>All</a>
+              </li>
+              <li>
+                <a href={location.pathname + "?type='Sell'"}>Sell</a>
+              </li>
+              <li>
+                <a href={location.pathname + "?type='Rent'"}>Rent</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="form-control">
           <input

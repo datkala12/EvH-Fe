@@ -48,7 +48,7 @@ function Menu() {
               <div className="card-body">
                 <h2 className="card-title text-body-dark">{category.name}</h2>
                 <div className="card-actions justify-end">
-                  <Link to={'/Detail/' + category.id} className="btn btn-primary">Xem Thêm</Link>
+                  <Link to={'/Detail/' + category.id} className="btn btn-primary">More</Link>
                 </div>
               </div>
             </div>
