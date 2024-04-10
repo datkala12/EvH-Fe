@@ -79,7 +79,7 @@ function Gdetail() {
           <div className="card w-auto h-auto bg-red-400 text-white shadow-xl">
             <div className="grid grid-cols-3 p-5">
               <div className="flex flex-col">
-                <span className="font-bold">Name</span> <span>Random</span>
+                <span className="font-bold">Id</span> <span>{data?.id}</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-bold">Item</span>{" "}

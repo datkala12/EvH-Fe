@@ -88,9 +88,9 @@ function Detail() {
               tabIndex={0}
               className="dropdown-content z-[1] menu p-2 shadow bg-slate-100 rounded-box w-52"
             >
-              <li>
+              {/* <li>
                 <a href={location.pathname + "?type='All'"}>All</a>
-              </li>
+              </li> */}
               <li>
                 <a href={location.pathname + "?type='Sell'"}>Sell</a>
               </li>

@@ -38,10 +38,11 @@ function Menu() {
       <div className="Content grid grid-cols-4 gap gap-5">
         {data.map(
           (category) => (
-            <div className="card card-compact w-auto h-auto bg-slate-100 shadow-xl ">
-              <figure>
+            <div className="card card-compact w-auto bg-slate-100 shadow-xl ">
+              <figure className="px-5 pt-5">
                 <img
                   src={category.cate_image}
+                  className="rounded-xl"
                   alt="Game"
                 />
               </figure>

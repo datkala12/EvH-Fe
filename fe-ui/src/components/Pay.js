@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useState, useEffect } from 'react';
 import { useParams, useSearchParams } from "react-router-dom";
 import { useWallet } from '@solana/wallet-adapter-react'
+import { Link } from "react-router-dom";
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 
 function Pay() {
@@ -47,14 +48,12 @@ function Pay() {
           <thead>
             <tr>
               <th>Account</th>
-              <th>Time</th>
               <th>Type</th>
               <th></th>
             </tr>
           </thead>
           {/* Set data */}
           <tbody id="price">
-
 
             {/* {Object.values(cart).map(product => ( */}
             {cart.map((product) => (
@@ -64,7 +63,7 @@ function Pay() {
                     <div className="avatar">
                       <div className="mask mask-squircle w-12 h-12">
                         <img
-                          src={product.image_detail}
+                          src="https://www.elle.vn/wp-content/uploads/2017/07/25/hinh-anh-dep-1.jpg"
                           alt={product.name}
                         />
                       </div>
@@ -77,11 +76,11 @@ function Pay() {
                     </div>
                   </div>
                 </td>
-                <td>
+                {/* <td>
                   Time:
                   <br />
                   <span className="badge badge-ghost badge-sm">{product.rentalDuration}</span>
-                </td>
+                </td> */}
                 <td>{product.type}</td>
                 <th>
                   <button className="btn btn-ghost" onClick={() => removeFromCart(product.id)}>
@@ -95,7 +94,8 @@ function Pay() {
         </table>
       </div>
       <div className="buy text-right ">
-        <button
+        <Link to={"/Checkout"} className="btn btn-outline btn-success mb-5 mr-20 ">Checkout</Link>
+        {/* <button
           className="btn btn-outline btn-success mb-5 mr-20 "
           onClick={() => document.getElementById("my_modal_3").showModal()}
           submitTarget='/checkout' enabled={publicKey !== null}
@@ -113,7 +113,7 @@ function Pay() {
               </h3>
             </div>
           </div>
-        </dialog>
+        </dialog> */}
       </div>
       <Footer />
     </div>

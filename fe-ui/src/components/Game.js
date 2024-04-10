@@ -42,7 +42,7 @@ function Game() {
       <div className="Card">
         <div className="Content grid grid-cols-4 gap gap-5">
           {data.filter((product) => (product.category.id == id && (!price ? true :
-            (price == "1") ? product.price > 0 : product.price > 19.99 &&
+            (price == "1") ? product.price > 0 : product.price > 19.99 ||
               (!type ? true : (type == "All" || product.type === "All") ? true : (type == "Rent" && product.type === "Rent") ? true : (type == "Sell" && product.type === "Sell"))
           ))).map((product) => (
             <div className="card w-auto bg-slate-100 shadow-xl">
