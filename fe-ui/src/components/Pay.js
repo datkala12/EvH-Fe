@@ -95,6 +95,7 @@ function Pay() {
       </div>
       <div className="buy text-right ">
         <Link to={"/Checkout"} className="btn btn-outline btn-success mb-5 mr-20 ">Checkout</Link>
+
         {/* <button
           className="btn btn-outline btn-success mb-5 mr-20 "
           onClick={() => document.getElementById("my_modal_3").showModal()}

@@ -61,7 +61,7 @@ export default function ProductManager(props) {
 
                 <div style={{ margin: '1%' }}>
                     <Button variant="contained" onClick={() => { setOpenAdd(!openAdd) }}>
-                        {(openAdd) ? "Cancel" : "Add new contact"}
+                        {(openAdd) ? "Cancel" : "Search"}
                     </Button>
                 </div>
                 {openAdd && (

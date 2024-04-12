@@ -1,12 +1,14 @@
 import Footer from "./Footer.js";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useWallet } from '@solana/wallet-adapter-react'
 import React, { useState, useEffect } from 'react';
 
 function Checkout() {
     const [cart, setCart] = useState([]);
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
+    const { publicKey } = useWallet()
     const [checkoutData, setCheckoutData, setOrder] = useState([]);
 
     useEffect(() => {
@@ -38,6 +40,7 @@ function Checkout() {
         console.log('Full Name:', fullName);
         console.log('Email:', email);
         console.log('Checkout Data:', checkoutData);
+
     };
 
     return (
@@ -89,9 +92,24 @@ function Checkout() {
                     </tbody>
                 </table>
                 <div className="mt-4 text-center">
-                    <button className="btn btn-primary m-5" onClick={handleCheckout}>
+                    <button className="btn btn-primary m-5"
+                        onClick={() => document.getElementById("my_modal_3").showModal()}
+                        enabled={publicKey !== null}
+                    >
                         Checkout
                     </button>
+                    <dialog id="my_modal_3" className="modal bg-slate-100">
+                        <div className="modal-box bg-slate-100">
+                            <form method="dialog">
+                                <button className="btn btn-sm absolute right-2 top-2">✕</button>
+                            </form>
+                            <div className="flex place-content-center ">
+                                <h3 className="font-bold text-lg ">
+                                    Payment success
+                                </h3>
+                            </div>
+                        </div>
+                    </dialog>
                     <Link to={"/"} className="btn btn-primary">
                         Back Home
                     </Link>

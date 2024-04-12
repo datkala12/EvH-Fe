@@ -36,7 +36,7 @@ function AdminHome() {
             {/* Nội dung của trang */}
             <div className="ml-64 p-8 text-black">
                 <h1 className="text-3xl font-bold mb-4">Summary</h1>
-                <div className="flex justify-center mx-auto gap-10">
+                {/* <div className="flex justify-center mx-auto gap-10">
                     <div className="p-4 border w-1/4 text-center">
                         <h2 className="text-lg font-semibold mb-4">Product</h2>
                         <p>Total: 25</p>
@@ -53,7 +53,7 @@ function AdminHome() {
                         <h2 className="text-lg font-semibold mb-4">Request</h2>
                         <p>Total: 9</p>
                     </div>
-                </div>
+                </div> */}
                 <Routes>
                     <Route path="/admin/ProductManager" component={ProductManager} />
                     <Route path="/admin/CategoryManager" component={CategoryManager} />

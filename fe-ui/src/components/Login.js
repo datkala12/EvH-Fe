@@ -13,10 +13,6 @@ function Login() {
             return;
         }
         console.log("Login with: ", { username, password });
-
-        // setUsername("");
-        // setPassword("");
-        // setErrorMessage("");
         try {
             const response = await axios.post('http://localhost:8080/api/login', {
                 username,
@@ -83,7 +79,7 @@ function Login() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className='mt-4'>
                         <button
                             type="submit"
                             className="btn btn-outline btn-accent float-right"

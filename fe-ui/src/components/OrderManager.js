@@ -36,7 +36,6 @@ export default function ProductManager(props) {
         { id: 'id', name: 'Id' },
         { id: 'order_status', name: 'Status' },
         { id: 'createDate', name: 'Date create' },
-        { id: 'fullname', name: 'Fullname' },
         { id: 'email', name: 'Email' }
     ]
 
@@ -59,7 +58,7 @@ export default function ProductManager(props) {
 
                 <div style={{ margin: '1%' }}>
                     <Button variant="contained" onClick={() => { setOpenAdd(!openAdd) }}>
-                        {(openAdd) ? "Cancel" : "Add new order"}
+                        {(openAdd) ? "Cancel" : "Search"}
                     </Button>
                 </div>
                 {openAdd && (
@@ -72,9 +71,6 @@ export default function ProductManager(props) {
                         </Grid>
                         <Grid item xs={3}>
                             <TextField id="outlined-basic" value={createDate} onChange={(e) => { setCreateDate(e.target.value) }} label="Date create" variant="outlined" fullWidth />
-                        </Grid>
-                        <Grid item xs={3}>
-                            <TextField id="outlined-basic" value={fulname} onChange={(e) => { setFullname(e.target.value) }} label="Fullname" variant="outlined" fullWidth />
                         </Grid>
                         <Grid item xs={3}>
                             <TextField id="outlined-basic" value={email} onChange={(e) => { setEmail(e.target.value) }} label="Email" variant="outlined" fullWidth />
@@ -106,7 +102,6 @@ export default function ProductManager(props) {
                                         <TableCell>{order.id}</TableCell>
                                         <TableCell>{order.order_status}</TableCell>
                                         <TableCell>{order.createDate}</TableCell>
-                                        <TableCell>{order.fulname}</TableCell>
                                         <TableCell>{order.email}</TableCell>
                                     </TableRow>
                                 )

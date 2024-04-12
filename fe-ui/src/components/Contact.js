@@ -6,9 +6,15 @@ function Contact() {
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+    console.log("Contact: ", { fullname, email, message });
     try {
       await axios.post('http://localhost:3000/api/contact/submit', {
         email,
@@ -21,10 +27,21 @@ function Contact() {
       alert('Failed to submit contact form. Please try again later.');
     }
   };
+
+  const validateForm = () => {
+    if (!email.trim() || !fullname.trim() || !message.trim()) {
+      setErrorMessage("Please enter a valid email or fullanme or message.");
+      return false;
+    }
+
+    return true;
+  };
+
   return (
     <div className="repon">
       <div className="container text-white px-[30rem] mb-5 p-5">
         <h1 className="text-2xl font-bold text-black text-center pb-10">Contact</h1>
+        {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5" onSubmit={handleSubmit}>
           <div>
             <label
@@ -75,13 +92,14 @@ function Contact() {
         </div>
         <div className="mt-4">
           <button
-            className="bg-blue-600 text-black py-2 px-4 rounded-lg transition-all duration-200 float-right"
             type="submit"
-          // onClick={() => document.getElementById("my_modal_3").showModal()}
+            className="btn btn-outline btn-accent float-right"
+
+            onClick={() => document.getElementById("my_modal_3").showModal()}
           >
             Send
           </button>
-          {/* <dialog id="my_modal_3" className="modal bg-slate-100">
+          <dialog id="my_modal_3" className="modal bg-slate-100">
             <div className="modal-box bg-slate-100">
               <form method="dialog">
                 <button className="btn btn-sm absolute right-2 top-2">✕</button>
@@ -90,7 +108,7 @@ function Contact() {
                 <h3 className="font-bold text-lg text-white ">Send successful</h3>
               </div>
             </div>
-          </dialog> */}
+          </dialog>
           <br />
         </div>
       </div>
