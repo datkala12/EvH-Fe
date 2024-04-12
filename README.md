@@ -1,7 +1,11 @@
 # EvH-Fe
-- Front-end for EventHub project
-- User `http://localhost:3000/`
-- Admin `http://localhost:3000/admin`
+* Front-end for AccHub project, this project need TestAPI project at [here](https://github.com/datkala12/AccHub) to run at the same time
+
+# How to run
+* After clone this repo, you need to open your terminal and type `cd fe-ui`
+* Type `npm start` to start the project
+* UserPage `http://localhost:3000/`
+* AdminPage `http://localhost:3000/admin`
 
 # Problem while running
 
